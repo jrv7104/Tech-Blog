@@ -18,7 +18,7 @@ router.get('/:id', (req,res) => {
     });
 
 //create new comment
-router.post('/' (req, res) => {
+router.post('/', (req, res) => {
 
     Comment.create(req.body).then(newComment => res.json(newComment))
 });
