@@ -18,7 +18,17 @@ router.get('/', withAuth, async (req, res) => {
                     "user_id",
                     "created_at"
                 ],
-                include: [
+                include: {
+                    model: User,
+                    attributes: ["username"]
+                },
+        ],
+    })
+    .then((dbPostData) => {
+        const posts = dbPostData.map((post) => post.get({ plain: true }));
+        res.render("dashboard", )
+
+
             }
         ]
 //     try {
