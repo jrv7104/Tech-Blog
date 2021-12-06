@@ -20,13 +20,20 @@ router.get('/', withAuth, async (req, res) => {
                 ],
                 include: {
                     model: User,
-                    attributes: ["username"]
+                    attributes: ["username"],
                 },
+            },
         ],
     })
     .then((dbPostData) => {
         const posts = dbPostData.map((post) => post.get({ plain: true }));
-        res.render("dashboard", )
+        res.render("dashboard", { posts, loggedIn: true});
+    })
+    .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 
             }
