@@ -7,7 +7,12 @@ router.get('/', withAuth, async (req, res) => {
         where: {
             user_id: req.session.user_id,
         },
-        
+        attributes: ["id", "title", "content", "created_at"],
+        include: [
+            {
+                
+            }
+        ]
 //     try {
 //       const userData = await User.findAll({
 //         attributes: { exclude: ['password'] },
