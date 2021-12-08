@@ -65,6 +65,14 @@ router.get("edit/:id", withAuth, (req, res) => {
             },
         ],
     })
+    .then((dbPostData) => {
+        if (!dbPostData) {
+            res.status(404).json({message: "No post found with this particular user id"});
+        return;
+        }
+
+        
+    })
         
 //     try {
 //       const userData = await User.findAll({
