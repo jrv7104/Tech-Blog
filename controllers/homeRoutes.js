@@ -26,7 +26,10 @@ router.get('/', (req, res) => {
       },
     ],
   })
-  
+  then((dbPostData) => {
+    const posts = dbPostData.map((post) => post.get({plain: true}));
+    
+  })
 
 // Prevent non logged in users from viewing the homepage
 // router.get('/', withAuth, async (req, res) => {
