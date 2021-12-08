@@ -37,7 +37,9 @@ router.get('/', withAuth, async (req, res) => {
     });
 });
 
-
+// Get a post from a user
+router.get("edit/:id", withAuth, (req, res) => {
+    
         
 //     try {
 //       const userData = await User.findAll({
