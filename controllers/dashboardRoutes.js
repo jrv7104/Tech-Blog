@@ -79,6 +79,12 @@ router.get("edit/:id", withAuth, (req, res) => {
             res.status(500).json(err);
         });
 
+// Create a new post
+router.get("/new", (req, res) => {
+    res.render("new-post", {loggedIn: true});
+});
+
+module.exports = router;
 
 //     try {
 //       const userData = await User.findAll({
@@ -108,4 +114,4 @@ router.get("edit/:id", withAuth, (req, res) => {
 //     res.render('login');
 //   });
 
-module.exports = router;
+
