@@ -16,11 +16,17 @@ router.get('/', (req, res) => {
           "createdAt",
         ],
         include: {
-          
-        }
-      }
-    ]
+          model: User,
+          attributes: ["username"],
+        },
+      },
+      {
+        model: User,
+        attributes: ["username"],
+      },
+    ],
   })
+  
 
 // Prevent non logged in users from viewing the homepage
 // router.get('/', withAuth, async (req, res) => {
