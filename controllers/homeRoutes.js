@@ -32,8 +32,10 @@ router.get('/', (req, res) => {
   })
   .catch((err) => {
     console.log(err);
-    
-  })
+    res.status(500).json(err);
+  });
+});
+
 
 // Prevent non logged in users from viewing the homepage
 // router.get('/', withAuth, async (req, res) => {
