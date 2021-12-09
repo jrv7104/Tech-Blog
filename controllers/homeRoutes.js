@@ -47,6 +47,10 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+//Register/signup
+router.get("/signup", (req, res) => {
+  res.render("signup");
+});
 
 // Prevent non logged in users from viewing the homepage
 // router.get('/', withAuth, async (req, res) => {
@@ -67,7 +71,5 @@ router.get('/login', (req, res) => {
 //     res.status(500).json(err);
 //   }
 // });
-
-
 
 module.exports = router;
