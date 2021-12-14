@@ -11,5 +11,8 @@ const response = await fetch('/api/posts', {
         title,
         content
     }),
+    headers: {
+        'Content-Type': 'application/json'
+    }
+});
 
-}
