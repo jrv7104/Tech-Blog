@@ -16,3 +16,9 @@ const response = await fetch('/api/posts', {
     }
 });
 
+if (response.ok) {
+    document.location.replace('/dashboard');
+} else {
+    alert(response.statusText);
+}
+
