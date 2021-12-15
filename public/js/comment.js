@@ -5,5 +5,5 @@ async function commentFormHandler(event) {
         window.location.toString().split('/').length - 1
     ];
 
-    
+    if (comment_text) {}
 }
