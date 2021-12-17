@@ -9,8 +9,11 @@ async function deleteFormHandler(event) {
         method: "DELETE",
         body: JSON.stringify({
             post_id: id,
-        })
-    }
+        }),
+        headers: {
+            "Content-Type": "application/json",
+    },
     
-    )
-}
+    })};
+
+    
