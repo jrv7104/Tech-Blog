@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 async function deleteFormHandler(event) {
     event.preventDefault();
 
@@ -16,4 +18,6 @@ async function deleteFormHandler(event) {
     
     })};
 
-    
+    if (response.ok) {
+        document.location.replace("/dashboard/");
+    } 
