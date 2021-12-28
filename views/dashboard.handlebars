@@ -3,6 +3,11 @@
 {{#if posts.length}}
 <div class="flex flex-col justify center items-center p2 rounded-2xl bg-gray-500 w-full">
 <h2 class="font-bold">Your Posts</h2>
-  
+  {{#each posts as |post|}}
+    {{> dashboard-postinfo post}}
+    {{/each}}
 
 </div>
+{{/if}}
+
+<script src="/js/add-post.js"></script>
