@@ -1,10 +1,3 @@
-{{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{user.name}}</h2>
-  </div>
-  <div class="col-md-6">
-    <h3>+ New Post</h3>
-  </div>
-</div>
-{{/each}}
+<a href="/dashboard/new" class="btn border-2 text white bg=blue-900 px-2 py-1 rounded-lg my-2"> + New Post</a>
+
+{{#if posts.length}}
