@@ -1,4 +1,6 @@
 <article class="flex flex-col w-11/12">
-
-
+  {{#each posts as |post|}}
+      {{> post-info post}}
+      {{/each}}
+      
 </article>>
